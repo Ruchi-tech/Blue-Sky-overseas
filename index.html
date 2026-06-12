@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlueSky Overseas – Study Abroad Consultancy | Bhopal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:#fff;color:#0a0f2e;}
+
+    /* NAV */
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 48px;background:#0a0f2e;position:sticky;top:0;z-index:999;border-bottom:0.5px solid rgba(255,255,255,0.08);}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-icon{width:36px;height:36px;border-radius:8px;background:#C69B3A;display:flex;align-items:center;justify-content:center;}
+    .logo-icon i{color:#fff;font-size:18px;}
+    .logo-text{color:#fff;font-size:17px;font-weight:600;letter-spacing:0.3px;}
+    .logo-text span{color:#C69B3A;}
+    .nav-links{display:flex;gap:28px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;transition:color 0.2s;}
+    .nav-links a:hover{color:#C69B3A;}
+    .nav-cta{background:#C69B3A;color:#fff;border:none;padding:10px 22px;border-radius:7px;font-size:13px;cursor:pointer;font-weight:500;text-decoration:none;}
+    .nav-cta:hover{background:#b8882e;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+    .hamburger span{width:22px;height:2px;background:#fff;border-radius:2px;}
+
+    /* HERO */
+    .hero{background:#0a0f2e;padding:80px 48px 64px;text-align:center;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(198,155,58,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(198,155,58,0.05) 1px,transparent 1px);background-size:48px 48px;}
+    .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(198,155,58,0.12);border:0.5px solid rgba(198,155,58,0.4);color:#C69B3A;padding:6px 16px;border-radius:20px;font-size:12px;margin-bottom:24px;position:relative;}
+    .hero h1{color:#fff;font-size:44px;font-weight:600;line-height:1.2;margin-bottom:16px;position:relative;}
+    .hero h1 em{color:#C69B3A;font-style:normal;}
+    .hero-sub{color:rgba(255,255,255,0.6);font-size:15px;max-width:520px;margin:0 auto 32px;line-height:1.8;position:relative;}
+    .hero-btns{display:flex;gap:14px;justify-content:center;position:relative;margin-bottom:40px;flex-wrap:wrap;}
+    .btn-gold{background:#C69B3A;color:#fff;border:none;padding:14px 30px;border-radius:8px;font-size:14px;cursor:pointer;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s;}
+    .btn-gold:hover{background:#b8882e;}
+    .btn-ghost{background:rgba(255,255,255,0.06);color:#fff;border:0.5px solid rgba(255,255,255,0.25);padding:14px 30px;border-radius:8px;font-size:14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s;}
+    .btn-ghost:hover{background:rgba(255,255,255,0.1);}
+    .hero-trust{display:flex;gap:32px;justify-content:center;position:relative;flex-wrap:wrap;}
+    .trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.55);font-size:13px;}
+    .trust-item i{color:#C69B3A;font-size:15px;}
+
+    /* FLAG STRIP */
+    .flag-strip{background:#111836;padding:12px 48px;display:flex;gap:0;justify-content:center;flex-wrap:wrap;border-top:0.5px solid rgba(255,255,255,0.06);border-bottom:0.5px solid rgba(255,255,255,0.06);}
+    .flag-item{display:flex;align-items:center;gap:8px;padding:4px 20px;border-right:0.5px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;}
+    .flag-item:last-child{border-right:none;}
+    .flag-dot{width:8px;height:8px;border-radius:50%;background:#C69B3A;flex-shrink:0;}
+
+    /* STATS */
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-bottom:0.5px solid #e8e3d8;}
+    .stat-box{padding:28px 16px;text-align:center;border-right:0.5px solid #e8e3d8;}
+    .stat-box:last-child{border-right:none;}
+    .stat-n{font-size:30px;font-weight:600;color:#0a0f2e;}
+    .stat-n span{color:#C69B3A;}
+    .stat-l{font-size:11px;color:#999;margin-top:4px;text-transform:uppercase;letter-spacing:0.6px;}
+
+    /* SECTIONS */
+    .section{padding:64px 48px;}
+    .section.alt{background:#f8f6f1;}
+    .sec-eyebrow{font-size:11px;color:#C69B3A;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;font-weight:500;}
+    .sec-title{font-size:28px;font-weight:600;color:#0a0f2e;margin-bottom:10px;}
+    .sec-sub{font-size:14px;color:#888;margin-bottom:36px;line-height:1.75;max-width:540px;}
+
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .svc-card{background:#fff;border:0.5px solid #e2ddd5;border-radius:14px;padding:26px;cursor:pointer;transition:transform 0.25s,border-color 0.25s;position:relative;overflow:hidden;}
+    .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#C69B3A;transform:scaleX(0);transition:transform 0.25s;transform-origin:left;}
+    .svc-card:hover{transform:translateY(-6px);border-color:#C69B3A;}
+    .svc-card:hover::before{transform:scaleX(1);}
+    .svc-ico{width:46px;height:46px;border-radius:10px;background:#f3ede0;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+    .svc-ico i{color:#C69B3A;font-size:22px;}
+    .svc-card h3{font-size:15px;font-weight:600;color:#0a0f2e;margin-bottom:8px;}
+    .svc-card p{font-size:13px;color:#888;line-height:1.7;}
+
+    /* COUNTRIES */
+    .countries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+    .c-card{background:#fff;border:0.5px solid #e2ddd5;border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform 0.2s,border-color 0.2s;}
+    .c-card:hover{transform:scale(1.04);border-color:#C69B3A;}
+    .c-flag{width:42px;height:42px;border-radius:10px;background:#f3ede0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+    .c-card h4{font-size:14px;font-weight:500;color:#0a0f2e;}
+    .c-card p{font-size:11px;color:#aaa;margin-top:3px;}
+
+    /* PROCESS */
+    .process-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:12px;}
+    .step{text-align:center;padding:0 10px;position:relative;}
+    .step:not(:last-child)::after{content:'';position:absolute;top:20px;right:-4px;width:60%;height:1px;background:#ddd;}
+    .step-num{width:42px;height:42px;border-radius:50%;background:#0a0f2e;color:#C69B3A;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+    .step h4{font-size:13px;font-weight:600;color:#0a0f2e;margin-bottom:5px;}
+    .step p{font-size:12px;color:#aaa;line-height:1.6;}
+
+    /* TESTIMONIALS */
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+    .t-card{background:#fff;border:0.5px solid #e2ddd5;border-radius:14px;padding:24px;}
+    .t-stars{color:#C69B3A;font-size:14px;margin-bottom:12px;letter-spacing:2px;}
+    .t-text{font-size:13px;color:#666;line-height:1.7;margin-bottom:16px;}
+    .t-author{display:flex;align-items:center;gap:12px;}
+    .t-av{width:38px;height:38px;border-radius:50%;background:#0a0f2e;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#C69B3A;flex-shrink:0;}
+    .t-name{font-size:13px;font-weight:600;color:#0a0f2e;}
+    .t-loc{font-size:11px;color:#aaa;margin-top:2px;}
+
+    /* COUNSELLOR */
+    .counsellor-section{background:#0a0f2e;padding:64px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+    .cl-eyebrow{font-size:11px;color:#C69B3A;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px;font-weight:500;}
+    .cl-name{color:#fff;font-size:30px;font-weight:600;margin-bottom:6px;}
+    .cl-title{color:#C69B3A;font-size:14px;margin-bottom:16px;}
+    .cl-bio{color:rgba(255,255,255,0.55);font-size:13px;line-height:1.8;margin-bottom:24px;}
+    .contact-list{display:flex;flex-direction:column;gap:12px;}
+    .contact-item{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:13px;}
+    .contact-item i{color:#C69B3A;font-size:17px;width:20px;flex-shrink:0;}
+    .form-box{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px;}
+    .form-box h3{color:#fff;font-size:17px;font-weight:600;margin-bottom:6px;}
+    .form-box p{color:rgba(255,255,255,0.45);font-size:12px;margin-bottom:20px;}
+    .form-row{display:flex;flex-direction:column;gap:12px;}
+    .f-input{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 16px;color:#fff;font-size:13px;width:100%;outline:none;font-family:'Inter',sans-serif;transition:border-color 0.2s;}
+    .f-input:focus{border-color:#C69B3A;}
+    .f-input::placeholder{color:rgba(255,255,255,0.3);}
+    .f-select{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 16px;color:rgba(255,255,255,0.5);font-size:13px;width:100%;outline:none;font-family:'Inter',sans-serif;}
+    .f-select option{background:#0a0f2e;color:#fff;}
+    .f-submit{background:#C69B3A;color:#fff;border:none;padding:13px;border-radius:8px;font-size:14px;cursor:pointer;font-weight:500;width:100%;margin-top:4px;transition:background 0.2s;}
+    .f-submit:hover{background:#b8882e;}
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float{position:fixed;bottom:28px;right:28px;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:999;box-shadow:0 4px 16px rgba(37,211,102,0.4);}
+    .whatsapp-float i{color:#fff;font-size:26px;}
+
+    /* FOOTER */
+    footer{background:#060b1f;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:0.5px solid rgba(255,255,255,0.06);}
+    .footer-logo{color:#fff;font-size:15px;font-weight:600;}
+    .footer-logo span{color:#C69B3A;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{color:rgba(255,255,255,0.35);font-size:12px;text-decoration:none;cursor:pointer;}
+    .footer-copy{color:rgba(255,255,255,0.3);font-size:12px;}
+
+    /* ANIMATIONS */
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav{padding:14px 20px;}
+      .nav-links,.nav-cta{display:none;}
+      .hamburger{display:flex;}
+      .hero{padding:56px 20px 48px;}
+      .hero h1{font-size:28px;}
+      .flag-strip{padding:10px 20px;}
+      .flag-item{padding:4px 10px;font-size:11px;}
+      .stats-row{grid-template-columns:repeat(2,1fr);}
+      .section{padding:48px 20px;}
+      .services-grid{grid-template-columns:1fr;}
+      .countries-grid{grid-template-columns:repeat(2,1fr);}
+      .process-row{grid-template-columns:1fr;gap:24px;}
+      .step:not(:last-child)::after{display:none;}
+      .testi-grid{grid-template-columns:1fr;}
+      .counsellor-section{grid-template-columns:1fr;padding:48px 20px;gap:32px;}
+      footer{padding:20px;flex-direction:column;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- DEV CREDIT BAR -->
+<div style="background:#C69B3A;padding:7px 48px;display:flex;justify-content:center;align-items:center;gap:8px;">
+  <i class="ti ti-code" style="color:#fff;font-size:14px;"></i>
+  <span style="color:#fff;font-size:12px;font-weight:500;letter-spacing:0.3px;">Website designed & managed by <strong>Shivakant Jaiswal</strong></span>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918085645428" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="ti ti-brand-whatsapp"></i>
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon"><i class="ti ti-world"></i></div>
+    <div class="logo-text">Blue<span>Sky</span> Overseas</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#countries">Countries</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Students</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Free Consultation</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-tag"><i class="ti ti-shield-check"></i> Trusted by 500+ students across India</div>
+  <h1>Study Abroad With<br><em>Confidence & Clarity</em></h1>
+  <p class="hero-sub">Expert overseas education counselling — from university selection to visa approval. Your dream destination is closer than you think.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-gold"><i class="ti ti-calendar"></i> Book Free Session</a>
+    <a href="https://wa.me/918085645428" target="_blank" class="btn-ghost"><i class="ti ti-brand-whatsapp"></i> WhatsApp Us</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-item"><i class="ti ti-check"></i> 98% visa success rate</div>
+    <div class="trust-item"><i class="ti ti-check"></i> 10+ years experience</div>
+    <div class="trust-item"><i class="ti ti-check"></i> 50+ partner universities</div>
+  </div>
+</section>
+
+<!-- FLAG STRIP -->
+<div class="flag-strip">
+  <div class="flag-item"><div class="flag-dot"></div> Canada</div>
+  <div class="flag-item"><div class="flag-dot"></div> United Kingdom</div>
+  <div class="flag-item"><div class="flag-dot"></div> USA</div>
+  <div class="flag-item"><div class="flag-dot"></div> Germany</div>
+  <div class="flag-item"><div class="flag-dot"></div> Australia</div>
+  <div class="flag-item"><div class="flag-dot"></div> France</div>
+  <div class="flag-item"><div class="flag-dot"></div> Netherlands</div>
+  <div class="flag-item"><div class="flag-dot"></div> Ireland</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat-box"><div class="stat-n">500<span>+</span></div><div class="stat-l">Students placed</div></div>
+  <div class="stat-box"><div class="stat-n">98<span>%</span></div><div class="stat-l">Visa success rate</div></div>
+  <div class="stat-box"><div class="stat-n">50<span>+</span></div><div class="stat-l">Partner universities</div></div>
+  <div class="stat-box"><div class="stat-n">10<span>+</span></div><div class="stat-l">Years experience</div></div>
+</div>
+
+<!-- SERVICES -->
+<section class="section alt" id="services">
+  <div class="fade-up">
+    <div class="sec-eyebrow">What we offer</div>
+    <div class="sec-title">Complete study abroad support</div>
+    <div class="sec-sub">From your first question to your flight departure — we are with you every step of the way.</div>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-school"></i></div>
+      <h3>University selection</h3>
+      <p>Personalised shortlisting based on your profile, budget, and career goals across all countries.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-file-description"></i></div>
+      <h3>Application & SOP</h3>
+      <p>Complete application support including SOP writing, LOR guidance, and document preparation.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-id-badge-2"></i></div>
+      <h3>Visa counselling</h3>
+      <p>End-to-end visa filing with 98% approval rate across UK, Canada, USA, Europe and more.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-trophy"></i></div>
+      <h3>Scholarship guidance</h3>
+      <p>Find and apply for merit and need-based scholarships to reduce your total cost of study.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-briefcase"></i></div>
+      <h3>Part-time work support</h3>
+      <p>Guidance on legal work rights, job hunting, and balancing work while studying abroad.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico"><i class="ti ti-plane-departure"></i></div>
+      <h3>Pre-departure support</h3>
+      <p>Accommodation, forex, travel SIM, airport guidance — everything before you fly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRIES -->
+<section class="section" id="countries">
+  <div class="fade-up">
+    <div class="sec-eyebrow">Destinations</div>
+    <div class="sec-title">Top countries we cover</div>
+    <div class="sec-sub">Expert knowledge across all major study abroad destinations worldwide.</div>
+  </div>
+  <div class="countries-grid fade-up">
+    <div class="c-card"><div class="c-flag">🇨🇦</div><div><h4>Canada</h4><p>PR pathway available</p></div></div>
+    <div class="c-card"><div class="c-flag">🇬🇧</div><div><h4>United Kingdom</h4><p>Post-study work visa</p></div></div>
+    <div class="c-card"><div class="c-flag">🇺🇸</div><div><h4>USA</h4><p>Top ranked universities</p></div></div>
+    <div class="c-card"><div class="c-flag">🇩🇪</div><div><h4>Germany</h4><p>Low / no tuition fees</p></div></div>
+    <div class="c-card"><div class="c-flag">🇦🇺</div><div><h4>Australia</h4><p>Work while studying</p></div></div>
+    <div class="c-card"><div class="c-flag">🇫🇷</div><div><h4>France</h4><p>Affordable education</p></div></div>
+    <div class="c-card"><div class="c-flag">🇳🇱</div><div><h4>Netherlands</h4><p>English programmes</p></div></div>
+    <div class="c-card"><div class="c-flag">🇮🇪</div><div><h4>Ireland</h4><p>Post-study 2yr visa</p></div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section alt" id="process">
+  <div class="fade-up">
+    <div class="sec-eyebrow">How it works</div>
+    <div class="sec-title">Your journey in 5 simple steps</div>
+    <div class="sec-sub">A clear guided process from your first call to landing abroad.</div>
+  </div>
+  <div class="process-row fade-up">
+    <div class="step"><div class="step-num">1</div><h4>Free counselling</h4><p>Understand your goals & eligibility</p></div>
+    <div class="step"><div class="step-num">2</div><h4>University shortlist</h4><p>Best-fit options for your profile</p></div>
+    <div class="step"><div class="step-num">3</div><h4>Application</h4><p>SOP, LOR & document filing</p></div>
+    <div class="step"><div class="step-num">4</div><h4>Visa process</h4><p>Complete visa support & filing</p></div>
+    <div class="step"><div class="step-num">5</div><h4>Fly & settle</h4><p>Pre-departure & arrival help</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="fade-up">
+    <div class="sec-eyebrow">Student stories</div>
+    <div class="sec-title">What our students say</div>
+    <div class="sec-sub">Real experiences from students we have helped achieve their dream.</div>
+  </div>
+  <div class="testi-grid fade-up">
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">Got my Canada study visa approved in just 6 weeks. Every document was perfectly guided by Gyanendra sir. Highly recommended!</p>
+      <div class="t-author"><div class="t-av">RK</div><div><div class="t-name">Rohit Kumar</div><div class="t-loc">Now studying in Toronto, Canada</div></div></div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">Received a scholarship worth ₹8 lakhs for UK. I never imagined studying abroad was this possible for me. Thank you BlueSky!</p>
+      <div class="t-author"><div class="t-av">PS</div><div><div class="t-name">Priya Sharma</div><div class="t-loc">Now studying in London, UK</div></div></div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">From Bhopal to Melbourne — the entire journey was smooth because of the expert counselling I received from this team.</p>
+      <div class="t-author"><div class="t-av">AV</div><div><div class="t-name">Ankit Verma</div><div class="t-loc">Now studying in Melbourne, Australia</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNSELLOR + CONTACT -->
+<section class="counsellor-section" id="contact">
+  <div>
+    <div class="cl-eyebrow">Meet your counsellor</div>
+    <div class="cl-name">Gyanendra Jaiswal</div>
+    <div class="cl-title">Senior Overseas Education Consultant</div>
+    <p class="cl-bio">10+ years of experience helping Indian students achieve their dream of studying abroad. Personally guided 500+ students across UK, Canada, USA, Germany and Europe. Every student gets individual attention and honest guidance.</p>
+    <div class="contact-list">
+      <div class="contact-item"><i class="ti ti-phone"></i> +91 80856 45428</div>
+      <div class="contact-item"><i class="ti ti-brand-whatsapp"></i> WhatsApp: 8085645428</div>
+      <div class="contact-item"><i class="ti ti-map-pin"></i> Bhopal, Madhya Pradesh, India</div>
+      <div class="contact-item"><i class="ti ti-clock"></i> Mon – Sat, 9:00 AM – 7:00 PM</div>
+    </div>
+  </div>
+  <div class="form-box">
+    <h3>Book a free consultation</h3>
+    <p>Fill the form and we will call you back within 24 hours</p>
+    <div class="form-row">
+      <input class="f-input" type="text" placeholder="Your full name" />
+      <input class="f-input" type="tel" placeholder="Phone number" />
+      <input class="f-input" type="text" placeholder="Preferred country (e.g. Canada, UK)" />
+      <select class="f-select">
+        <option value="">Select course level</option>
+        <option>Undergraduate (Bachelor's)</option>
+        <option>Postgraduate (Master's)</option>
+        <option>PhD / Research</option>
+        <option>Diploma / Certificate</option>
+      </select>
+      <button class="f-submit">Request free callback</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Blue<span>Sky</span> Overseas</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#countries">Countries</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BlueSkyOverseas.com · Bhopal, India</div>
+</footer>
+
+<!-- DEVELOPER FOOTER CREDIT -->
+<div style="background:#030710;padding:10px 48px;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;">
+  <i class="ti ti-heart" style="color:#C69B3A;font-size:13px;"></i>
+  <span style="color:rgba(255,255,255,0.35);font-size:11px;">Designed &amp; developed by <strong style="color:rgba(255,255,255,0.55);">Shivakant Jaiswal</strong> &nbsp;&middot;&nbsp;</span>
+  <a href="mailto:shivakantjayswal2003@gmail.com" style="color:#C69B3A;font-size:11px;text-decoration:none;">shivakantjayswal2003@gmail.com</a>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
