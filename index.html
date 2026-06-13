@@ -163,6 +163,10 @@
 
     /* RESPONSIVE */
     @media(max-width:768px){
+      .hero > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;text-align:center!important;}
+      .hero > div > div:last-child{display:none!important;}
+      .hero-btns{justify-content:center!important;}
+      .hero-trust{justify-content:center!important;}
       nav{padding:14px 20px;}
       .nav-links,.nav-cta{display:none;}
       .hamburger{display:flex;}
@@ -218,23 +222,42 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="min-height:580px;">
   <div class="hero-grid"></div>
-  <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1400&auto=format&fit=crop&q=70" 
+  <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1400&auto=format&fit=crop&q=80" 
        alt="Students studying abroad" 
-       style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.15;pointer-events:none;"/>
-  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(10,15,46,0.92) 0%,rgba(10,15,46,0.75) 100%);pointer-events:none;"></div>
-  <div class="hero-tag"><i class="ti ti-shield-check"></i> Trusted by 500+ students across India</div>
-  <h1>Study Abroad With<br><em>Confidence & Clarity</em></h1>
-  <p class="hero-sub">Expert overseas education counselling — from university selection to visa approval. Your dream destination is closer than you think.</p>
-  <div class="hero-btns">
-    <a href="#contact" class="btn-gold"><i class="ti ti-calendar"></i> Book Free Session</a>
-    <a href="https://wa.me/918085645428" target="_blank" class="btn-ghost"><i class="ti ti-brand-whatsapp"></i> WhatsApp Us</a>
-  </div>
-  <div class="hero-trust">
-    <div class="trust-item"><i class="ti ti-check"></i> 98% visa success rate</div>
-    <div class="trust-item"><i class="ti ti-check"></i> 10+ years experience</div>
-    <div class="trust-item"><i class="ti ti-check"></i> 50+ partner universities</div>
+       style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.35;pointer-events:none;"/>
+  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(10,15,46,0.88) 0%,rgba(10,15,46,0.65) 60%,rgba(10,15,46,0.45) 100%);pointer-events:none;"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;text-align:left;position:relative;max-width:1100px;margin:0 auto;">
+    <div>
+      <div class="hero-tag" style="margin-bottom:20px;"><i class="ti ti-shield-check"></i> Trusted by 500+ students across India</div>
+      <h1 style="font-size:42px;">Study Abroad With<br><em>Confidence & Clarity</em></h1>
+      <p class="hero-sub" style="margin-left:0;">Expert overseas education counselling — from university selection to visa approval. Your dream destination is closer than you think.</p>
+      <div class="hero-btns" style="justify-content:flex-start;">
+        <a href="#contact" class="btn-gold"><i class="ti ti-calendar"></i> Book Free Session</a>
+        <a href="https://wa.me/918085645428" target="_blank" class="btn-ghost"><i class="ti ti-brand-whatsapp"></i> WhatsApp Us</a>
+      </div>
+      <div class="hero-trust" style="justify-content:flex-start;margin-top:24px;">
+        <div class="trust-item"><i class="ti ti-check"></i> 98% visa success</div>
+        <div class="trust-item"><i class="ti ti-check"></i> 10+ years exp</div>
+        <div class="trust-item"><i class="ti ti-check"></i> 50+ universities</div>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div style="border-radius:20px;overflow:hidden;height:380px;box-shadow:0 20px 60px rgba(0,0,0,0.4);">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&auto=format&fit=crop&q=80" 
+             alt="Happy students" 
+             style="width:100%;height:100%;object-fit:cover;"/>
+      </div>
+      <div style="position:absolute;bottom:-16px;left:-16px;background:#C69B3A;color:#fff;padding:14px 18px;border-radius:12px;box-shadow:0 8px 24px rgba(198,155,58,0.4);">
+        <div style="font-size:22px;font-weight:700;">500+</div>
+        <div style="font-size:11px;opacity:0.9;">Students placed abroad</div>
+      </div>
+      <div style="position:absolute;top:-16px;right:-16px;background:#fff;color:#0a0f2e;padding:14px 18px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+        <div style="font-size:22px;font-weight:700;color:#C69B3A;">98%</div>
+        <div style="font-size:11px;color:#888;">Visa success rate</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -435,8 +458,7 @@
     <div class="contact-list">
       <div class="contact-item"><i class="ti ti-phone"></i> +91 80856 45428</div>
       <div class="contact-item"><i class="ti ti-brand-whatsapp"></i> WhatsApp: 8085645428</div>
-      <div class="contact-item"><i class="ti ti-map-pin"></i> Office 1: Near Navlakha Square, Indore</div>
-      <div class="contact-item"><i class="ti ti-map-pin"></i> Office 2: Near Bhavarkua Square, Indore</div>
+      <div class="contact-item"><i class="ti ti-map-pin"></i> First Floor 4, Janki Nagar, Adjacent to Presto Solution, AB Rd, Navlakha, Indore (M.P.)</div>
       <div class="contact-item"><i class="ti ti-clock"></i> Mon – Sat, 9:00 AM – 7:00 PM</div>
     </div>
   </div>
